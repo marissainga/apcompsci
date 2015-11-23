@@ -57,3 +57,26 @@ public String notString(String str) {
   else{ return ("not " + str);}
 }
 
+public String missingChar(String str, int n) {
+  String beg = str.substring(0, n);
+  String end = str.substring(n+1, str.length());
+  return beg + end;
+}
+
+public String frontBack(String str) {
+  if(str.length() > 1){
+  String a = str.substring(0,1);
+  String b = str.substring(str.length()-1,str.length());
+  String c = str.substring(1, str.length()-1);
+  return b + c + a;}
+  else{ return str;}
+}
+
+public String front3(String str) {
+  String front;
+  if (str.length() >= 3) {
+    front = str.substring(0, 3);
+  }
+  else { front = str; }
+  return front + front + front;
+}
