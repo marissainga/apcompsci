@@ -7,6 +7,8 @@ public class MagpieRunner2
         Magpie2 maggie = new Magpie2();
         
         System.out.println (maggie.getGreeting());
+        Scanner first = new Scanner (System.in);
+        String state = first.nextLine();
         Scanner in = new Scanner (System.in);
         String statement = in.nextLine();
         
