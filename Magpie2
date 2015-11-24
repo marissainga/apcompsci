@@ -4,10 +4,25 @@ public class Magpie2
     {
         return "Hi I'm Carchbot \nDid you see that last Penn State game?";
     }
+    public String getGreetingResp(String state)
+    {
+        String response = "";
+        if(response.equalsIgnoreCase(yes)) ||
+          (response.equalsIgnoreCase(yeah)) ||
+          (response.equalsIgnoreCase(yup)) ||
+          (response.equalsIgnoreCase(Sadly)) ||
+          (response.equalsIgnoreCase(It was a great game)))
+        {
+            return "Cool, I love football";
+        }
+        else{ return "Oh, nevermind";}
+    }
+    
+        
     public String getResponse(String statement)
     {
         String response = "";
-        if (statement.indexOf("no") >= 0)
+        if (statement.indexOf(" no ") >= 0)
         {
             response = sayNo();
         }
@@ -24,11 +39,11 @@ public class Magpie2
                 || statement.indexOf("grandpa") >= 0
                 || statement.indexOf("daughter") >= 0
                 || statement.indexOf("son") >= 0
-                || statement.indexOf("great grandma") >= 0
-                || statement.indexOf("great grandpa") >= 0 )
         {
             response = "Tell me more about your family.";
         }
+        else if (statement.indexOf("win") >= 0) { response = "There are winners and there are non-winners";}
+        else if (statement.indexOf("work") >= 0) { response = "Do your work";}
         else
         {
             response = getRandomResponse();
@@ -54,7 +69,7 @@ public class Magpie2
         
         if (whichResponse == 0)
         {
-            response = "Interesting, tell me more.";
+            response = "Nice";
         }
         else if (whichResponse == 1)
         {
